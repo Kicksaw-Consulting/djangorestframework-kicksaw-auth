@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "djangorestframework-api-gateway-auth"
+version = "0.1.0"
+description = "Provides DRF auth classes that are ultimately backed by API Gateway"
+readme = "README.md"
+repository = "https://github.com/Kicksaw-Consulting/djangorestframework-api-gateway-auth"
+authors = ["Alex Drozd <alex@kicksaw.com>", "Tim Sabat <tim@kicksaw.com>"]
+keywords = ["django", "djangorestframework", "drf", "aws", "apigateway"]
+packages = [
+    { include = "djangorestframework_api_gateway_auth" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+boto3 = "^1.17.51"
+djangorestframework = "^3.12.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
