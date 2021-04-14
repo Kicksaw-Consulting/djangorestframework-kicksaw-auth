@@ -14,6 +14,14 @@ poetry add djangorestframework-api-gateway-auth
 
 ## BasicApiGatewayApiKeyAuth
 
+```python
+from djangorestframework_api_gateway_auth import BasicApiGatewayApiKeyAuth
+
+@authentication_classes([BasicApiGatewayApiKeyAuth])
+def endpoint(request: HttpRequest):
+    # ...
+```
+
 This authenticator reads basic auth and ensures the username and password
 match an API Gateway key
 
