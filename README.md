@@ -1,3 +1,15 @@
+# Installation
+
+```
+pip install djangorestframework-api-gateway-auth
+```
+
+Or with poetry
+
+```
+poetry add djangorestframework-api-gateway-auth
+```
+
 # Usage
 
 ## BasicApiGatewayApiKeyAuth
