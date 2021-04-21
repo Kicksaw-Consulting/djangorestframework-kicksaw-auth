@@ -26,9 +26,9 @@ class BasicApiGatewayApiKeyAuth(BasicAuthentication):
 
         # if the key value does not match, deny access
         if (
-            response["items"][0]["name"] != userid
-            and response["items"][0]["value"] != password
+            response["items"][0]["name"] == userid
+            and response["items"][0]["value"] == password
         ):
-            raise exceptions.AuthenticationFailed("Invalid login attempt")
+            return FakeUser(), None
 
-        return FakeUser(), None
+        raise exceptions.AuthenticationFailed("Invalid login attempt")
