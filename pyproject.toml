@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "djangorestframework-api-gateway-auth"
-version = "0.1.0"
+version = "0.2.0"
 description = "Provides DRF auth classes that are ultimately backed by API Gateway"
 readme = "README.md"
 repository = "https://github.com/Kicksaw-Consulting/djangorestframework-api-gateway-auth"
