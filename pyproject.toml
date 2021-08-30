@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "djangorestframework-kicksaw-auth"
-version = "0.2.0"
+version = "1.0.0"
 description = "Provides DRF auth classes that are backed by various AWS resources"
 readme = "README.md"
 repository = "https://github.com/Kicksaw-Consulting/djangorestframework-kicksaw-auth"
