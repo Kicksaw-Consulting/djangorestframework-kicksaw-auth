@@ -1,5 +1,6 @@
 import boto3
 
+from django.conf import settings
 from django.http import HttpRequest
 
 from rest_framework import exceptions
@@ -28,6 +29,24 @@ class BasicApiGatewayApiKeyAuth(BasicAuthentication):
         if (
             response["items"][0]["name"] == userid
             and response["items"][0]["value"] == password
+        ):
+            return FakeUser(), None
+
+        raise exceptions.AuthenticationFailed("Invalid login attempt")
+
+
+class BasicSettingsAuth(BasicAuthentication):
+    """
+    Pull username and password from plain ol' django settings
+    """
+
+    def authenticate_credentials(
+        self, username: str, password: str, request: HttpRequest
+    ):
+        # if the key value does not match, deny access
+        if (
+            username == settings.DRF_KICKSAW_AUTH_USERNAME
+            and password == settings.DRF_KICKSAW_AUTH_PASSWORD
         ):
             return FakeUser(), None
 

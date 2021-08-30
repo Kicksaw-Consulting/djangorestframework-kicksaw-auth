@@ -1,13 +1,13 @@
 # Installation
 
 ```
-pip install djangorestframework-api-gateway-auth
+pip install djangorestframework-kicksaw-auth
 ```
 
 Or with poetry
 
 ```
-poetry add djangorestframework-api-gateway-auth
+poetry add djangorestframework-kicksaw-auth
 ```
 
 # Usage
@@ -15,7 +15,7 @@ poetry add djangorestframework-api-gateway-auth
 ## BasicApiGatewayApiKeyAuth
 
 ```python
-from djangorestframework_api_gateway_auth import BasicApiGatewayApiKeyAuth
+from djangorestframework_kicksaw_auth import BasicApiGatewayApiKeyAuth
 
 @authentication_classes([BasicApiGatewayApiKeyAuth])
 def endpoint(request: HttpRequest):
